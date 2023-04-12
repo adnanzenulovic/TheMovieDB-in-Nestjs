@@ -1,0 +1,108 @@
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta
+      http-equiv='Content-Security-Policy'
+      content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+    />
+
+    <link rel='stylesheet' href='./css/style.css' />
+    <script
+      nonce='{{nonce}}'
+      src='https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js'
+    ></script>
+
+    <title>Movie App</title>
+  </head>
+
+  <body>
+    <div class='wrapper'>
+      <div class='search-block'>
+        <a href='/'>
+          <h1>TheMovieDB</h1>
+        </a>
+        <a id='logout-button' class=''> Logout </a>
+
+      </div>
+      <div class='search-block'>
+
+        {{! <a
+          id='logout-button'
+          style='align-content: right;'
+          class='snipcss-iwIlx'
+        >
+          Logout
+        </a> }}
+
+      </div>
+      <br />
+      <div id='main-search' class='content-dark hidden-sm hidden-xs'>
+        <div class='container'>
+          <div id='main-search-fields' style='width: 880px'>
+            <p class='pull-left term'>Search Term:</p>
+            <input id='query' autocomplete='off' type='search' />
+            <div class='selects-container'>
+              <p>Genre:</p>
+              <select id='genreFilter'>
+                <option value='' selected>All</option>
+              </select>
+            </div>
+            <div class='selects-container'>
+              <p>Rating:</p>
+              <select id='ratingFilter'>
+                <option value='' selected>All</option>
+                <option value='9'>9+</option>
+                <option value='8'>8+</option>
+                <option value='7'>7+</option>
+                <option value='6'>6+</option>
+                <option value='5'>5+</option>
+                <option value='4'>4+</option>
+                <option value='3'>3+</option>
+                <option value='2'>2+</option>
+                <option value='1'>1+</option>
+              </select>
+            </div>
+            <div class='selects-container'>
+              <p>Year:</p>
+              <select id='yearFilter'>
+                <option value='' selected>All</option>
+              </select>
+            </div>
+            <div class='selects-container'>
+              <p>Type:</p>
+              <select id='typeFilter'>
+                <option value='' selected>All</option>
+                <option value='tv-shows'>TV Shows</option>
+                <option value='movies'>Movies</option>
+              </select>
+            </div>
+            <div class='selects-container selects-container-last'>
+              <p>Order By:</p>
+              <select id='orderByFilter'>
+                <option value='latest' selected>Latest</option>
+                <option value='oldest'>Oldest</option>
+                <option value='rating-ascending'>IMDb Rating Ascending</option>
+                <option value='rating-descending'>
+                  IMDb Rating Descending
+                </option>
+              </select>
+            </div>
+          </div>
+          <div id='main-search-btn'>
+            <input
+              class='button-green-download2-big'
+              type='submit'
+              id='searchButton'
+              value='Search'
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class='row' id='root'></div>
+    </div>
+
+    <script src='./js/script.js' defer></script>
+  </body>
+</html>
