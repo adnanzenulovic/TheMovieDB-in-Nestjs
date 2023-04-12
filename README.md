@@ -24,7 +24,8 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+🎬 Movie Explorer is a modern and user-friendly web application for browsing and exploring movies, built using the powerful NestJS framework. This application utilizes MongoDB as its database for managing movie data efficiently and seamlessly. The Movie Explorer app aims to provide movie enthusiasts with an engaging platform to discover new movies, find details about their favorite films, and share their experiences with others.
+
 
 ## Installation
 
