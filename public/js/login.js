@@ -13,19 +13,14 @@ signInButton.addEventListener('click', signin);
 signUpButton.addEventListener('click', signup);
 
 async function signin() {
-  // if (
-  //   !validateEmail(emailSignIn.value) ||
-  //   !validatePassword(passwordSignIn.value)
-  // )
-  //   return alert('Something is wrong..');
-  // const body = {
-  //   email: emailSignIn.value,
-  //   password: passwordSignIn.value,
-  // };
-
+  if (
+    !validateEmail(emailSignIn.value) ||
+    !validatePassword(passwordSignIn.value)
+  )
+    return alert('Something is wrong..');
   const body = {
-    email: 'ado@gmail.com',
-    password: 'Stajeovo123',
+    email: emailSignIn.value,
+    password: passwordSignIn.value,
   };
 
   let response = await fetch('http://localhost:3000/auth/signin', {
@@ -46,8 +41,8 @@ async function signup() {
     password2 = passwordSignUp2.value;
 
   const body = {
-    email: 'ado@gmail.com',
-    password: 'Stajeovo123',
+    email: emailSignUp.value,
+    password: passwordSignUp1.value,
   };
 
   if (!validateEmail(email)) {
